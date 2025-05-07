@@ -7,9 +7,14 @@ user_question = st.text_input("質問を入力してください：")
 
 # 回答表示
 if user_question:
-    # キーワードチェック（小文字化して判定）
+    # 小文字に変換して判定しやすくする
     question_lower = user_question.lower()
-    if "解析" in question_lower or "図面" in question_lower　or "承認図" in question_lower or "改造図" in question_lower or "製作図" in question_lower:
+    
+    # キーワードリスト（必要に応じて追加可能）
+    keywords = ["解析", "図面", "承認図", "製作図", "改造図", "調査"]
+    
+    # いずれかのキーワードが含まれているかを判定
+    if any(keyword in question_lower for keyword in keywords):
         response = "技術検討依頼書は必要です。"
     else:
         response = "ちょっと質問の意味がわかりません。"
