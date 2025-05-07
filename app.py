@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("技術検討依頼チェックアプリ")
+st.title("技術検討依頼必要有無チェックアプリ")
 
 # 質問入力欄
 user_question = st.text_input("質問を入力してください：")
