@@ -9,7 +9,7 @@ user_question = st.text_input("質問を入力してください：")
 if user_question:
     # キーワードチェック（小文字化して判定）
     question_lower = user_question.lower()
-    if "解析依頼" in question_lower or "図面" in question_lower:
+    if "解析" in question_lower or "図面" in question_lower:
         response = "技術検討依頼書は必要です。"
     else:
         response = "ちょっと質問の意味がわかりません。"
