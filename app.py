@@ -17,7 +17,7 @@ if user_question:
         # 最初に見つかったキーワードで回答を構成
         response = f"{matched_keywords[0]}なので技術検討依頼書は必要です。"
     else:
-        response = "ちょっと質問の意味がわかりません。"
+        response = "ちょっと何言ってるかわかりません。"
 
     st.subheader("回答")
     st.write(response)
