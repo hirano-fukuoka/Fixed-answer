@@ -17,7 +17,7 @@ if user_question:
     if any(keyword in question_lower for keyword in keywords):
         response = "技術検討依頼書は必要です。"
     else:
-        response = "ちょっと質問の意味がわかりません。"
+        response = "ちょっと何言ってるかわかりません。"
 
     st.subheader("回答")
     st.write(response)
